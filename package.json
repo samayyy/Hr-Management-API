@@ -1,7 +1,7 @@
 {
-    "name": "wohlig-framework",
+    "name": "hr-management",
     "version": "1.0.0",
-    "description": "Wohlig Framework",
+    "description": "HR Management",
     "main": "app.js",
     "module": "main.js",
     "repository": {
@@ -30,6 +30,7 @@
         "moment": "^2.29.3",
         "mongoose": "^6.3.3",
         "node-cron": "^3.0.0",
+        "nodemon": "^2.0.16",
         "require-all": "^3.0.0"
     },
     "devDependencies": {
