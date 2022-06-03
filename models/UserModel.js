@@ -4,7 +4,7 @@ export default {
      * @param {number} input any number
      * @returns {number} that number, plus one.
      */
-     saveData: async (data) => {
+    saveData: async (data) => {
         let obj = new User(data)
         await obj.save()
         return obj

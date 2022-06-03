@@ -7,5 +7,3 @@
  * Use Middleware in Express Apps
  * app.use(bodyParser.json())
  */
-
-
