@@ -4,6 +4,11 @@ export default {
      * @param {number} input any number
      * @returns {number} that number, plus one.
      */
+     saveData: async (data) => {
+        let obj = new User(data)
+        await obj.save()
+        return obj
+    },
     search: async (body) => {
         const pageNo = body.page
         const skip = (pageNo - 1) * global.paginationLimit
@@ -25,11 +30,6 @@ export default {
             _id: id,
             status: { $in: ["enabled", "disabled"] }
         }).exec()
-    },
-    saveData: async (data) => {
-        let obj = new Person(data)
-        await obj.save()
-        return obj
     },
     updateData: async (id, data) => {
         let obj = await Person.findOneAndUpdate({ _id: id }, data, {
