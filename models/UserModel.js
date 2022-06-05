@@ -1,9 +1,16 @@
+import User from "../mongooseModel/User"
+
 export default {
     /**
      * This function adds one to its input.
      * @param {number} input any number
      * @returns {number} that number, plus one.
      */
+    createUser: async (data) => {
+        let obj = new User(data)
+        let ans = await obj.save()
+        return ans
+    },
     saveData: async (data) => {
         let obj = new User(data)
         await obj.save()
